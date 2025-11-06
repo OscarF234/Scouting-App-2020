@@ -1,0 +1,35 @@
+.bottomButton {
+    position: absolute;
+    bottom: 10%;
+    width: 10%;
+    height: 80%;
+    border: 0;
+    border-radius: 5%;
+    font-size: 4vh;
+}
+
+.bottomButton:active{
+    position: absolute;
+    bottom: 10%;
+    width: 10%;
+    height: 80%;
+    border: 0;
+    border-radius: 5%;
+    font-size: 4vh;
+}
+
+.red {
+    background-color: #FF0000;
+}
+
+.red:active{
+    background-color: #e00000
+}
+
+.blue {
+    background-color: #0059FF;
+}
+
+.blue:active{
+    background-color: #0254bf;
+}

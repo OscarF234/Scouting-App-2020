@@ -1,0 +1,65 @@
+#Shoot {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    height: 10%;
+    width: 5%;
+    border: 0;
+    border-radius: 20%;
+    background-color: #5283ff
+}
+
+#Shoot:active {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    height: 10%;
+    width: 5%;
+    border: 0;
+    border-radius: 20%;
+    background-color: #3a61c2
+}
+
+#Spin {
+    position: absolute;
+    top: 25%;
+    left: 54%;
+    height: 10%;
+    width: 5%;
+    border: 0;
+    border-radius: 20%;
+    background-color: #5283ff
+}
+
+#Spin:active {
+    position: absolute;
+    top: 25%;
+    left: 54%;
+    height: 10%;
+    width: 5%;
+    border: 0;
+    border-radius: 20%;
+    background-color: #3a61c2
+}
+
+#Hang {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    height: 10%;
+    width: 5%;
+    border: 0;
+    border-radius: 20%;
+    background-color: #5283ff
+}
+
+#Hang:active {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    height: 10%;
+    width: 5%;
+    border: 0;
+    border-radius: 20%;
+    background-color: #3a61c2
+}
