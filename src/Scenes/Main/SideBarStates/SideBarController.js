@@ -5,11 +5,12 @@ import SideBarShoot from './SideBarShoot'
 import SideBarPickup from './SideBarPickup'
 import SideBarWheel from './SideBarWheel'
 
-function RenderSideBar({timerState, setTimerState, ScoutNaming, shootButton, low, outer, inner, missBall, pickup, FieldPosition, selected, wheelRSettings, wheelPSettings, wheelPageSettings, didHang}) {
+function RenderSideBar({timerState, setTimerState, ScoutNaming, TeamNaming, shootButton, low, outer, inner, missBall, pickup, FieldPosition, selected, wheelRSettings, wheelPSettings, wheelPageSettings, didHang}) {
     if (timerState == 0) {
         return <SideBarWait
                     setTimerState={setTimerState}
                     ScoutNaming={ScoutNaming}
+                    TeamNaming={TeamNaming}
                />
     } else if (timerState == 1) {
         if (pickup.ground == 1) {

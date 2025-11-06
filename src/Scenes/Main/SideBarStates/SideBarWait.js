@@ -1,7 +1,8 @@
 import './SideBar.css'
 import ScoutInput from './../ScoutInput.js'
+import TeamInput from '../TeamInput.js';
 
-function SideBarWait({setTimerState, ScoutNaming}) {
+function SideBarWait({setTimerState, ScoutNaming, TeamNaming}) {
 
     return (<div>
 
@@ -14,6 +15,10 @@ function SideBarWait({setTimerState, ScoutNaming}) {
 
         <ScoutInput
             ScoutNaming={ScoutNaming}
+        />
+
+        <TeamInput
+            TeamNaming={TeamNaming}
         />
 
     </div>);

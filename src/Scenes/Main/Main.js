@@ -4,12 +4,14 @@ import SideBarMain from './SideBarStates/SideBarMain.js'
 import Timer from './Timer.js'
 import RenderSideBar from './SideBarStates/SideBarController.js'
 import Field from './Field.js'
+import BottomBar from './BottomBar.js';
 
 function MainScene({wrapper}) {
 
     const [teamScouting, setScouting] = useState("N/A");
     const [timerState, setTimerState] = useState(0);
     const [ScoutName, SetScoutName] = useState("");
+    const [TeamName, SetTeamName] = useState("");
     const [position, setPosition] = useState([]);
     const [selectedPos, setSelectedPos] = useState(0);
     const [shoot, setShoot] = useState(0);
@@ -25,6 +27,7 @@ function MainScene({wrapper}) {
 
     const timerSettings = {timerState, setTimerState}
     const ScoutNaming = {ScoutName, SetScoutName}
+    const TeamNaming = {TeamName, SetTeamName}
     const FieldPosition = {position, setPosition}
     const selected = {selectedPos, setSelectedPos}
     const shootButton = {shoot, setShoot}
@@ -70,6 +73,7 @@ function MainScene({wrapper}) {
             teamScouting={teamScouting}
             wrapper={wrapper}
             ScoutName={ScoutName}
+            TeamName={TeamName}
         />
     </div>
 
@@ -85,6 +89,7 @@ function MainScene({wrapper}) {
             timerState={timerState}
             setTimerState={setTimerState}
             ScoutNaming={ScoutNaming}
+            TeamNaming={TeamNaming}
             shootButton={shootButton}
             low={low}
             outer={outer}
@@ -124,65 +129,10 @@ function MainScene({wrapper}) {
         height: "15vh",
         background: "linear-gradient(90deg,rgba(0, 47, 166, 1) 50%, rgba(196, 0, 0, 1) 50%)"
     }}>
-        <button className="bottomButton blue"
-        style={{
-            left: "5%"
-        }}
-        onClick={function(event){
-            setScouting(function(){
-                return "Blue 1"
-            });
-        }}>Blue 1</button>
-
-        <button className="bottomButton blue"
-        style={{
-            left: "20%"
-        }}        
-        onClick={function(event){
-            setScouting(function(){
-                return "Blue 2"
-            });
-        }}>Blue 2</button>
-
-        <button className="bottomButton blue"
-        style={{
-            left: "35%",
-        }}
-        onClick={function(event){
-            setScouting(function(){
-                return "Blue 3"
-            });
-        }}>Blue 3</button>
-
-        <button className="bottomButton red"
-        style={{
-            right: "5%",
-        }}
-        onClick={function(event){
-            setScouting(function(){
-                return "Red 1"
-            });
-        }}>Red 1</button>
-
-        <button className="bottomButton red"
-        style={{
-            right:"20%"
-        }}
-        onClick={function(event){
-            setScouting(function(){
-                return "Red 2"
-            });
-        }}>Red 2</button>
-
-        <button className="bottomButton red"
-        style={{
-            right:"35%"
-        }}
-        onClick={function(event){
-            setScouting(function(){
-                return "Red 3"
-            });
-        }}>Red 3</button>
+        <BottomBar
+            timerSettings={timerSettings}
+            setScouting={setScouting}
+        />
     </div>
     </>)
 }

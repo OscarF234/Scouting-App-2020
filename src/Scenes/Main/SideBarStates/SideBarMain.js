@@ -1,6 +1,6 @@
 import './SideBar.css'
 
-function SideBarMain({teamScouting, ScoutName}) {
+function SideBarMain({teamScouting, ScoutName, TeamName}) {
 
     return(<div>
         <p style={{
@@ -8,7 +8,7 @@ function SideBarMain({teamScouting, ScoutName}) {
             top: "25%",
             left: "5%",
             fontSize: "5vh",
-            width: "15vw"
+            width: "30vh"
         }}>Scouting: {teamScouting}</p>
 
         <p style={{
@@ -16,13 +16,16 @@ function SideBarMain({teamScouting, ScoutName}) {
             top: "55%",
             left: "5%",
             fontSize: "5vh",
-            width: "15vw"
+            width: "30vh"
         }}>Scout: {ScoutName}</p>
 
-        <button id="BackToMenu"
-        onClick={function(event){
-            console.log("gobacktomainscreen");
-        }}>MENU</button>
+        <p style={{
+            position: "absolute",
+            top: "10%",
+            left: "5%",
+            fontSize: "5vh",
+            width: "30vh"
+        }}>Team: {TeamName}</p>
     </div>)
 }
 
