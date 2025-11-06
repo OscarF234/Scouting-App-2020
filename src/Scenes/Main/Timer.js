@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import prettyPrintTimer from "./../../Helpers";
 
 function Timer({timerSettings}) {
-    const [seconds, setSeconds] = useState(10);
+    const [seconds, setSeconds] = useState(150);
 
     useEffect(() => {
 
